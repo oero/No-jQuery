@@ -2,7 +2,7 @@
 
 $(el).addClass(className);
 
-//IE8,9,10+
+//IE8,9
 // Native
 
 if (el.classList)
