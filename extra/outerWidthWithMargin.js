@@ -1,0 +1,29 @@
+// jQuery
+
+$(el).outerWidth(true);
+
+
+// Native
+// IE8+ 
+
+function outerWidth(el) {
+    var width = el.offsetWidth;
+    var style = el.currentStyle || getComputedStyle(el);
+
+    width += parseInt(style.marginLeft) + parseInt(style.marginRight);
+    return width;
+}
+
+outerWidth(el);
+
+// IE9+
+
+function outerWidth(el) {
+    var width = el.offsetWidth;
+    var style = getComputedStyle(el);
+
+    width += parseInt(style.marginLeft) + parseInt(style.marginRight);
+    return width;
+}
+
+outerWidth(el);
